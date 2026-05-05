@@ -20,4 +20,14 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\GitHubUserActivity\GitHubUserActivity.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Update="Data\TestData.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
 </Project>

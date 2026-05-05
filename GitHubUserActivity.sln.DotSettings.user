@@ -8,5 +8,6 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::AB4378D9-01EC-430E-B579-A2A7F140ADF8::net9.0::GitHubUserActivityTests.GitHubEventDeserializerTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::AB4378D9-01EC-430E-B579-A2A7F140ADF8::net9.0::GitHubUserActivityTests.ModelsTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::AB4378D9-01EC-430E-B579-A2A7F140ADF8::net9.0::GitHubUserActivityTests.GitHubUserActivityRequesterTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

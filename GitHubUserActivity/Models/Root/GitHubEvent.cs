@@ -30,3 +30,13 @@ public class GitHubEvent
     [JsonProperty("org")]
     public OrgInfo? Org { get; set; }
 }
+
+public static class GitHubEventExtensions
+{
+    public static string GetEventName(this GitHubEvent gitHubEvent)
+    {
+        var eventType = gitHubEvent.Type ?? "unknown";
+        var repo = gitHubEvent.Repo?.Name ?? "unknown repo";
+        return string.Concat(eventType, " ", repo);
+    }
+}

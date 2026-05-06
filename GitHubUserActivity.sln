@@ -17,6 +17,5 @@ Global
 		{AB4378D9-01EC-430E-B579-A2A7F140ADF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB4378D9-01EC-430E-B579-A2A7F140ADF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB4378D9-01EC-430E-B579-A2A7F140ADF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB4378D9-01EC-430E-B579-A2A7F140ADF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

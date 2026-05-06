@@ -24,31 +24,31 @@ public static class MessageFactory
         switch (gitHubEvent.GitHubEvent.Type)
         {
             case "PushEvent":
-                return $"{actor} pushed {gitHubEvent.Count} commit(s) to {repo}";
+                return $"- pushed {gitHubEvent.Count} commit(s) to {repo}";
             case "PullRequestEvent":
-                return $"{actor} {action ?? "updated"} a pull request {gitHubEvent.Count} times in {repo}";
+                return $"- {action ?? "updated"} a pull request {gitHubEvent.Count} times in {repo}";
             case "PullRequestReviewEvent":
-                return $"{actor} {action ?? "reviewed"} a pull request {gitHubEvent.Count} times in {repo}";
+                return $"- {action ?? "reviewed"} a pull request {gitHubEvent.Count} times in {repo}";
             case "PullRequestReviewCommentEvent":
-                return $"{actor} {action ?? "left"} {gitHubEvent.Count} comment(s) on the pull request in {repo}";
+                return $"- {action ?? "left"} {gitHubEvent.Count} comment(s) on the pull request in {repo}";
             case "IssuesEvent":
-                return $"{actor} {action ?? "updated"} an issue {gitHubEvent.Count} times in {repo}";
+                return $"- {action ?? "updated"} an issue {gitHubEvent.Count} times in {repo}";
             case "IssueCommentEvent":
-                return $"{actor} {action ?? "commented on"} an issue {gitHubEvent.Count} times in {repo}";
+                return $"- {action ?? "commented on"} an issue {gitHubEvent.Count} times in {repo}";
             case "WatchEvent":
-                return $"{actor} starred {repo} {gitHubEvent.Count} times";
+                return $"- starred {repo} {gitHubEvent.Count} times";
             case "ForkEvent":
-                return $"{actor} forked {repo} {gitHubEvent.Count} times";
+                return $"- forked {repo} {gitHubEvent.Count} times";
             case "CreateEvent":
-                return $"{actor} created {gitHubEvent.GitHubEvent.Payload?.RefType ?? "a reference"} {gitHubEvent.GitHubEvent.Payload?.Ref ?? string.Empty} {gitHubEvent.Count} times in {repo}".Trim();
+                return $"- created {gitHubEvent.GitHubEvent.Payload?.RefType ?? "a reference"} {gitHubEvent.Count} times in {repo}".Trim();
             case "DeleteEvent":
-                return $"{actor} deleted {gitHubEvent.GitHubEvent.Payload?.RefType ?? "a reference"} {gitHubEvent.GitHubEvent.Payload?.Ref ?? string.Empty} {gitHubEvent.Count} times in {repo}".Trim();
+                return $"- deleted {gitHubEvent.GitHubEvent.Payload?.RefType ?? "a reference"} {gitHubEvent.Count} times in {repo}".Trim();
             case "ReleaseEvent":
-                return $"{actor} {action ?? "published"} release {gitHubEvent.GitHubEvent.Payload?.Release?.TagName ?? string.Empty} {gitHubEvent.Count} times in {repo}".Trim();
+                return $"- {action ?? "published"} release {gitHubEvent.GitHubEvent.Payload?.Release?.TagName ?? string.Empty} {gitHubEvent.Count} times in {repo}".Trim();
             case "PublicEvent":
-                return $"{actor} made {repo} public";
+                return $"- made {repo} public";
             default:
-                return $"{actor} performed {gitHubEvent.GitHubEvent.Type ?? "an action"} {gitHubEvent.Count} times in {repo}";
+                return $"- performed {gitHubEvent.GitHubEvent.Type ?? "an action"} {gitHubEvent.Count} times in {repo}";
         }
     }
 }

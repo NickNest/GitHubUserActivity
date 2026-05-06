@@ -20,7 +20,7 @@ public class MessageFactoryTests
 
         var messages = MessageFactory.GetMessages(handledEvents).ToList();
 
-        Assert.That(messages, Is.EqualTo(new[] { "octocat pushed 3 commit(s) to octo/repo" }));
+        Assert.That(messages, Is.EqualTo(new[] { "- pushed 3 commit(s) to octo/repo" }));
     }
 
     [Test]
@@ -41,7 +41,7 @@ public class MessageFactoryTests
 
         var messages = MessageFactory.GetMessages(handledEvents).ToList();
 
-        Assert.That(messages, Is.EqualTo(new[] { "Someone updated a pull request 2 times in unknown repository" }));
+        Assert.That(messages, Is.EqualTo(new[] { "- updated a pull request 2 times in unknown repository" }));
     }
 
     [Test]
@@ -64,7 +64,7 @@ public class MessageFactoryTests
 
         var message = MessageFactory.GetMessages(handledEvents).Single();
 
-        Assert.That(message, Is.EqualTo("octocat created a reference  1 times in octo/repo"));
+        Assert.That(message, Is.EqualTo("- created a reference 1 times in octo/repo"));
         Assert.That(message.StartsWith(" "), Is.False);
         Assert.That(message.EndsWith(" "), Is.False);
     }
@@ -92,7 +92,7 @@ public class MessageFactoryTests
 
         var message = MessageFactory.GetMessages(handledEvents).Single();
 
-        Assert.That(message, Is.EqualTo("octocat published release v1.2.3 4 times in octo/repo"));
+        Assert.That(message, Is.EqualTo("- published release v1.2.3 4 times in octo/repo"));
     }
 
     [Test]
@@ -105,7 +105,7 @@ public class MessageFactoryTests
 
         var message = MessageFactory.GetMessages(handledEvents).Single();
 
-        Assert.That(message, Is.EqualTo("octocat performed MysteryEvent 7 times in octo/repo"));
+        Assert.That(message, Is.EqualTo("- performed MysteryEvent 7 times in octo/repo"));
     }
 
     [Test]
